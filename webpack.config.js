@@ -1,5 +1,5 @@
-var webpack = require("webpack");
-var commonsPlugin = new webpack.optimize.CommonsChunkPlugin("common.js");
+/*var webpack = require("webpack");
+var commonsPlugin = new webpack.optimize.CommonsChunkPlugin("common.js");*/
 
 module.exports = {
   module: {
@@ -16,6 +16,6 @@ module.exports = {
   output: {
     path: "./static/scripts",
     filename: "[name].js"
-  },
-  plugins: [commonsPlugin]
+  }
+  // plugins: [commonsPlugin]
 };
