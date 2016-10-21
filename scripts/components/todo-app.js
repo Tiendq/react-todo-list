@@ -6,7 +6,7 @@ export default class TodoApp extends React.Component {
     super(props);
 
     this.state = {
-      text: "",
+      text: "What do you want to do today?",
       items: []
     };
 

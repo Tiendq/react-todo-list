@@ -1,6 +1,6 @@
 import React from "react";
 
-export default class TodoItem extends React.Component {
+class TodoItem extends React.Component {
   constructor(props) {
     super(props);
 
@@ -38,3 +38,10 @@ export default class TodoItem extends React.Component {
     );
   }
 }
+
+TodoItem.propTypes = {
+  id: React.PropTypes.number,
+  text: React.PropTypes.string
+};
+
+export default TodoItem;

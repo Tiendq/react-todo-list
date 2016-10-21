@@ -14,8 +14,9 @@ module.exports = {
     app: "./scripts/app.js"
   },
   output: {
+    filename: "[name].js",
     path: "./static/scripts",
-    filename: "[name].js"
+    publicPath: "/static/scripts/"
   }
   // plugins: [commonsPlugin]
 };

@@ -1,0 +1,41 @@
+exports[`test Completed item 1`] = `
+<li
+  className="form-check todoitem done">
+  <label
+    className="form-check-label">
+    <input
+      className="form-check-input"
+      onChange={[Function]}
+      type="checkbox" />
+     
+    Completed
+  </label>
+  <button
+    className="btn btn-danger btn-sm"
+    onClick={[Function]}
+    type="button">
+    x
+  </button>
+</li>
+`;
+
+exports[`test Not completed item 1`] = `
+<li
+  className="form-check todoitem undone">
+  <label
+    className="form-check-label">
+    <input
+      className="form-check-input"
+      onChange={[Function]}
+      type="checkbox" />
+     
+    Not completed
+  </label>
+  <button
+    className="btn btn-danger btn-sm"
+    onClick={[Function]}
+    type="button">
+    x
+  </button>
+</li>
+`;

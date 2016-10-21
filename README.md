@@ -8,9 +8,10 @@ You will learn about:
 * React
 * ES6
 * Webpack
+* Testing with jest
 
 ## How to start
 
 `yarn install`
 
-`webpack-dev-server`
+`yarn run start`
