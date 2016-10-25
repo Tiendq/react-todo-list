@@ -5,8 +5,8 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.js$/,
-      exclude: /node_modules|static/,
-      loader: "babel"
+      loaders: ["babel"],
+      exclude: /node_modules|static/
     }]
   },
   devtool: "source-map",

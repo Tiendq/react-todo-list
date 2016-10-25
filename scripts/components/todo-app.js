@@ -42,20 +42,19 @@ export default class TodoApp extends React.Component {
       return item;
     });
 
-    this.setState((prevState) => ({
-      items: [].concat(updatedItems),
-      text: prevState.text
-    }));
+    // State Updates are Merged
+    this.setState({
+      items: [].concat(updatedItems)
+    });
   }
   handleDeleteItem(itemId) {
     var updatedItems = this.state.items.filter(item => {
       return item.id !== itemId;
     });
 
-    this.setState((prevState) => ({
-      items: [].concat(updatedItems),
-      text: prevState.text
-    }));
+    this.setState({
+      items: [].concat(updatedItems)
+    });
   }
   render() {
     return (
