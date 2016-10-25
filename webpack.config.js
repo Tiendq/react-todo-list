@@ -3,6 +3,16 @@ var commonsPlugin = new webpack.optimize.CommonsChunkPlugin("common.js");*/
 
 module.exports = {
   module: {
+    preLoaders: [{
+      test: /\.js?$/,
+      loader: "eslint",
+      exclude: /node_modules|static/,
+      query: {
+        configFile: ".eslintrc.js",
+        //formatter: require("eslint-stylish-config"), // with .stylishconfig file
+        globals: ["$"]
+      }
+    }],
     loaders: [{
       test: /\.js$/,
       loaders: ["babel"],

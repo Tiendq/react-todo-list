@@ -8,7 +8,8 @@ You will learn about:
 * React
 * ES6
 * Webpack
-* Testing with jest
+* Linting with ESLint
+* Testing with Jest
 
 ## How to start
 

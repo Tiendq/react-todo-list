@@ -1,0 +1,12 @@
+{
+  "colors": {
+    "path": "bold",
+    "position": "gray",
+    "warning": "yellow",
+    "error": "red",
+    "description": "dim",
+    "rule": "cyan",
+    "summary": "gray",
+    "noproblem": "green"
+  }
+}

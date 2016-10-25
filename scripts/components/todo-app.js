@@ -48,9 +48,7 @@ export default class TodoApp extends React.Component {
     });
   }
   handleDeleteItem(itemId) {
-    var updatedItems = this.state.items.filter(item => {
-      return item.id !== itemId;
-    });
+    var updatedItems = this.state.items.filter(item => item.id !== itemId);
 
     this.setState({
       items: [].concat(updatedItems)
