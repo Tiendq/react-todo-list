@@ -1,6 +1,8 @@
 import React from "react";
 import TodoItem from "./todo-item";
 
+const styles = require("../../scss/todo-list.scss");
+
 class TodoList extends React.Component {
   render() {
     return (

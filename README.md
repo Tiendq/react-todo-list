@@ -8,6 +8,7 @@ You will learn about:
 * React
 * ES6
 * Webpack
+* Sass and Bootstrap
 * Linting with ESLint
 * Testing with Jest
 

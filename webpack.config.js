@@ -17,7 +17,16 @@ module.exports = {
       test: /\.js$/,
       loaders: ["babel"],
       exclude: /node_modules|static/
+    }, {
+      test: /\.scss$/,
+      loaders: ["style", "css", "sass"],
+      exclude: /node_modules|static/
     }]
+  },
+  sassLoader: {
+    sourceMap: true,
+    sourceComments: true,
+    outputStyle: "expanded"
   },
   devtool: "source-map",
   entry: {

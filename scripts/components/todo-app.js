@@ -1,6 +1,8 @@
 import React from "react";
 import TodoList from "./todo-list";
 
+const styles = require("../../scss/todo-app.scss");
+
 export default class TodoApp extends React.Component {
   constructor(props) {
     super(props);
