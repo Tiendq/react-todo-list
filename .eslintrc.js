@@ -1,8 +1,10 @@
 module.exports = {
   "env": {
     "browser": true,
-    "node": true,
-    "es6": true
+    "es6": true,
+    "jest": true,
+    "jquery": true,
+    "node": true
   },
   "extends": ["eslint:recommended", "plugin:react/recommended"],
   "parser": "babel-eslint",
@@ -222,7 +224,7 @@ module.exports = {
     "operator-linebreak": "error",
     "padded-blocks": "off",
     "prefer-arrow-callback": "off",
-    "prefer-const": "error",
+    "prefer-const": 0,
     "prefer-numeric-literals": "error",
     "prefer-reflect": "error",
     "prefer-rest-params": "error",
@@ -261,6 +263,8 @@ module.exports = {
     "vars-on-top": "off",
     "wrap-iife": "error",
     "wrap-regex": "error",
-    "yield-star-spacing": "error"
+    "yield-star-spacing": "error",
+    "react/jsx-uses-vars": [2],
+    "react/prop-types": 1
   }
 };

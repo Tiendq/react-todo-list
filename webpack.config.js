@@ -1,34 +1,20 @@
-/*var webpack = require("webpack");
-var commonsPlugin = new webpack.optimize.CommonsChunkPlugin("common.js");*/
-
 module.exports = {
   module: {
     preLoaders: [{
       test: /\.js?$/,
       loader: "eslint",
-      exclude: /node_modules|static/,
-      query: {
-        configFile: ".eslintrc.js",
-        //formatter: require("eslint-stylish-config"), // with .stylishconfig file
-        globals: ["$"]
-      }
+      exclude: /node_modules/
     }],
     loaders: [{
       test: /\.js$/,
       loaders: ["babel"],
-      exclude: /node_modules|static/
+      exclude: /node_modules/
     }, {
       test: /\.scss$/,
       loaders: ["style", "css", "sass"],
-      exclude: /node_modules|static/
+      exclude: /node_modules/
     }]
   },
-  sassLoader: {
-    sourceMap: true,
-    sourceComments: true,
-    outputStyle: "expanded"
-  },
-  devtool: "source-map",
   entry: {
     app: "./scripts/app.js"
   },
@@ -36,6 +22,11 @@ module.exports = {
     filename: "[name].js",
     path: "./static/scripts",
     publicPath: "/static/scripts/"
-  }
-  // plugins: [commonsPlugin]
+  },
+  sassLoader: {
+    sourceMap: true,
+    sourceComments: true,
+    outputStyle: "expanded"
+  },
+  devtool: "source-map"
 };
