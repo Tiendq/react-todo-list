@@ -1,4 +1,4 @@
-exports[`test Completed item 1`] = `
+exports[`test There is 1 completed item 1`] = `
 <li
   className="form-check todoitem done">
   <label
@@ -19,7 +19,7 @@ exports[`test Completed item 1`] = `
 </li>
 `;
 
-exports[`test Not completed item 1`] = `
+exports[`test There is 1 incomplete item 1`] = `
 <li
   className="form-check todoitem undone">
   <label

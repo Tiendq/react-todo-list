@@ -7,8 +7,13 @@
     "build": "webpack -p",
     "start": "webpack-dev-server --inline --hot --host 0.0.0.0",
     "watch": "webpack --progress --colors --watch",
-    "test": "jest",
+    "test": "jest --watch",
     "retest": "jest -u"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^.+\\.scss$": "<rootDir>/scripts/mocks/style-mock.js"
+    }
   },
   "repository": {
     "url": "https://github.com/Tiendq/react-todo-list.git",
@@ -36,6 +41,7 @@
     "eslint-stylish-config": "^0.0.2",
     "jest": "^16.0.2",
     "node-sass": "^3.10.1",
+    "react-addons-test-utils": "^15.3.2",
     "react-hot-loader": "^3.0.0-beta.6",
     "react-test-renderer": "^15.3.2",
     "sass-loader": "^4.0.2",
