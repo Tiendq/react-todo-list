@@ -12,7 +12,7 @@
   },
   "jest": {
     "moduleNameMapper": {
-      "^.+\\.scss$": "<rootDir>/scripts/mocks/style-mock.js"
+      "^.+\\.scss$": "identity-obj-proxy"
     }
   },
   "repository": {
@@ -39,7 +39,7 @@
     "eslint-plugin-import": "^2.0.1",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.4.1",
-    "eslint-stylish-config": "^0.0.2",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^16.0.2",
     "node-sass": "^3.10.1",
     "react-addons-test-utils": "^15.3.2",
