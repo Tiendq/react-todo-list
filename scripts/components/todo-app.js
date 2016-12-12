@@ -1,5 +1,23 @@
-import React from "react";
-import TodoList from "./todo-list";
+import React from 'react';
+import AddTodoItem from './add-todo-item';
+import FilterableTodoList from './filterable-todo-list';
+import '../../scss/todo-app.scss';
+
+const TodoApp = () => (
+  <div>
+    <h3 className="app-title">My React Todo List</h3>
+    <div className="row">
+      <div className="col-md-3">
+        <AddTodoItem />
+        <FilterableTodoList />
+      </div>
+    </div>
+  </div>
+);
+
+export default TodoApp;
+
+/*import TodoList from "./todo-list";
 
 const styles = require("../../scss/todo-app.scss");
 
@@ -77,3 +95,4 @@ export default class TodoApp extends React.Component {
     );
   }
 }
+*/

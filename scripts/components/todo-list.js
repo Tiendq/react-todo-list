@@ -1,22 +1,24 @@
-import React from "react";
-import TodoItem from "./todo-item";
+import React from 'react';
+import TodoItem from './todo-item';
+import '../../scss/todo-list.scss';
 
-const styles = require("../../scss/todo-list.scss");
-
-class TodoList extends React.Component {
-  render() {
-    return (
-      <ul className="todolist">
-        {this.props.items.map(item => <TodoItem key={item.id} id={item.id} text={item.text} completed={item.done} onItemCompleted={this.props.onItemCompleted} onDeleteItem={this.props.onDeleteItem} />)}
-      </ul>
-    );
-  }
-}
+const TodoList = ({items, onToggleItem, onRemoveItem}) => (
+  <ul className="todolist">
+    {items.map(item => <TodoItem key={item.id}
+      {...item}
+      onToggleItem={() => onToggleItem(item.id)}
+      onRemoveItem={() => onRemoveItem(item.id)} />)}
+  </ul>
+);
 
 TodoList.propTypes = {
-  items: React.PropTypes.array,
-  onItemCompleted: React.PropTypes.func,
-  onDeleteItem: React.PropTypes.func
+  items: React.PropTypes.arrayOf(React.PropTypes.shape({
+    id: React.PropTypes.number.isRequired,
+    text: React.PropTypes.string.isRequired,
+    completed: React.PropTypes.bool.isRequired
+  }).isRequired).isRequired,
+  onToggleItem: React.PropTypes.func.isRequired,
+  onRemoveItem: React.PropTypes.func.isRequired
 };
 
 export default TodoList;
