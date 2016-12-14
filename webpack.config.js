@@ -1,13 +1,13 @@
 module.exports = {
   module: {
     preLoaders: [{
-      test: /\.js?$/,
+      test: /\.js$/,
       loader: "eslint",
       exclude: /node_modules/
     }],
     loaders: [{
       test: /\.js$/,
-      loaders: ["babel"],
+      loader: "babel",
       exclude: /node_modules/
     }, {
       test: /\.scss$/,

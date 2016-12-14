@@ -11,9 +11,8 @@ const todoItem = (state = {}, action) => {
       return state.id !== action.id ? state : null;
 
     case 'TOGGLE_ITEM':
-      return state.id !== action.id ? state : Object.assign({}, state, {
-        completed: !state.completed
-      });
+      return state.id !== action.id ? state : Object.assign({}, state,
+        { completed: !state.completed });
 
     default:
       return state
@@ -22,13 +21,13 @@ const todoItem = (state = {}, action) => {
 
 const items = (state = [], action) => {
   switch (action.type) {
-    case 'ADD_TODO':
+    case 'ADD_ITEM':
       return [...state, todoItem(null, action)];
 
     case 'REMOVE_ITEM':
       return state.filter(i => null !== todoItem(i, action));
 
-    case 'TOGGLE_TODO':
+    case 'TOGGLE_ITEM':
       return state.map(i => todoItem(i, action));
 
     default:
@@ -39,7 +38,7 @@ const items = (state = [], action) => {
 const filter = (state = 'SHOW_ALL', action) => {
   switch (action.type) {
     case 'CHANGE_FILTER':
-      return action.name;
+      return action.filter;
 
     default:
       return state;

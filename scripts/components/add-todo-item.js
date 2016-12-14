@@ -16,8 +16,8 @@ const AddItemForm = ({ dispatch }) => {
       }
     }}>
       <div className="col-xs-12">
-        <input type="text" className="form-control" ref={node => input = node} />
-        <button type="submit" className="btn btn-primary">Add</button>
+        <input type="text" className="form-control todo-text" ref={node => input = node} defaultValue="React is amazing!" placeholder="To do goes here" />
+        <button type="submit" className="btn btn-primary add-todo">Add</button>
       </div>
     </form>
   );

@@ -3,12 +3,16 @@ import TodoItem from './todo-item';
 import '../../scss/todo-list.scss';
 
 const TodoList = ({items, onToggleItem, onRemoveItem}) => (
-  <ul className="todolist">
-    {items.map(item => <TodoItem key={item.id}
-      {...item}
-      onToggleItem={() => onToggleItem(item.id)}
-      onRemoveItem={() => onRemoveItem(item.id)} />)}
-  </ul>
+  <div className="row">
+    <div className="col-xs-12">
+      <ul className="todo-list">
+        {items.map(item => <TodoItem key={item.id}
+          {...item}
+          onToggleItem={() => onToggleItem(item.id)}
+          onRemoveItem={() => onRemoveItem(item.id)} />)}
+      </ul>
+    </div>
+  </div>
 );
 
 TodoList.propTypes = {

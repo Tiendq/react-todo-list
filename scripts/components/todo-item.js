@@ -13,7 +13,7 @@ class TodoItem extends React.Component {
     }
   }
   render() {
-    let itemClass = `form-check todoitem ${this.props.completed ? 'done' : 'open'}`;
+    let itemClass = `form-check todo-item ${this.props.completed ? 'done' : 'open'}`;
 
     return (
       <li className={itemClass} ref={li => this.listItem = li}>

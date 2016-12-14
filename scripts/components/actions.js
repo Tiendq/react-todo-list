@@ -16,9 +16,9 @@ const toggleItem = (id) => ({
   id
 });
 
-const changeFilter = (name) => ({
+const changeFilter = (filter) => ({
   type: 'CHANGE_FILTER',
-  name
+  filter
 });
 
 export {
