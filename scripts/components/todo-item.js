@@ -18,7 +18,7 @@ class TodoItem extends React.Component {
     return (
       <li className={itemClass} ref={li => this.listItem = li}>
         <label className="form-check-label">
-          <input type="checkbox" className="form-check-input" onChange={this.props.onToggleItem} /> {this.props.text}
+          <input type="checkbox" className="form-check-input" onChange={this.props.onToggleItem} checked={this.props.completed} /> {this.props.text}
         </label>
         <button type="button" className="btn btn-danger btn-sm" onClick={this.props.onRemoveItem}>x</button>
       </li>

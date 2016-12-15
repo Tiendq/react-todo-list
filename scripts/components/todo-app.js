@@ -1,15 +1,17 @@
 import React from 'react';
 import AddTodoItem from './add-todo-item';
 import FilterableTodoList from './filterable-todo-list';
+import FilterBar from './filter-bar';
 import '../../scss/todo-app.scss';
 
 const TodoApp = () => (
   <div>
     <h3 className="app-title">My React Todo List</h3>
     <div className="row">
-      <div className="col-md-3">
+      <div className="col-md-4">
         <AddTodoItem />
         <FilterableTodoList />
+        <FilterBar />
       </div>
     </div>
   </div>

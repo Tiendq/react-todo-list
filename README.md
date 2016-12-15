@@ -19,7 +19,7 @@ You will learn about:
 `yarn run start`
 
 ## TO DO
-* Filter by status
+* ~~Filter by status~~
 * Nice remove icon
 * Add new item at the bottom, same as iOS Todo app
 * Editable app title
