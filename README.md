@@ -20,6 +20,7 @@ You will learn about:
 
 ## TO DO
 * ~~Filter by status~~
+* ~~Update Add button state~~
 * Nice remove icon
 * Add new item at the bottom, same as iOS Todo app
 * Editable app title

@@ -4,7 +4,7 @@
   "description": "A simple TODO application with React",
   "main": "index.js",
   "scripts": {
-    "build": "webpack -p",
+    "build": "NODE_ENV=production webpack -p",
     "start": "webpack-dev-server --inline --hot --host 0.0.0.0",
     "watch": "webpack --progress --colors --watch",
     "test": "jest --watch",

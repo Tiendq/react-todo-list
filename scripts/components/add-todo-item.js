@@ -3,7 +3,54 @@ import { connect } from 'react-redux';
 import { addItem } from './actions';
 import '../../scss/add-todo-item.scss';
 
-/*
+class AddItemForm extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      text: 'React is amazing!'
+    };
+
+    this.textChangeHandler = this.textChangeHandler.bind(this);
+    this.submitHandler = this.submitHandler.bind(this);
+  }
+  textChangeHandler(event) {
+    this.setState({
+      text: event.target.value
+    });
+  }
+  submitHandler(event) {
+    event.preventDefault();
+
+    if (this.state.text.length) {
+      this.props.dispatch(addItem(this.state.text));
+
+      this.setState({
+        text: ''
+      });
+    }
+  }
+  render() {
+    return (
+      <form className="form-inline row" onSubmit={this.submitHandler}>
+        <div className="col-xs-12">
+          <input type="text" className="form-control todo-text" onChange={this.textChangeHandler} value={this.state.text} placeholder="To do goes here" />
+          <button type="submit" className="btn btn-primary add-todo" disabled={0 === this.state.text.length}>Add</button>
+        </div>
+      </form>
+    );
+  }
+}
+
+AddItemForm.propTypes = {
+  dispatch: React.PropTypes.func.isRequired
+};
+
+const AddTodoItem = connect()(AddItemForm);
+export default AddTodoItem;
+
+/* Stateless component.
+
 const AddItemForm = ({ dispatch }) => {
   let input = null;
 
@@ -24,36 +71,3 @@ const AddItemForm = ({ dispatch }) => {
   );
 }
 */
-
-class AddItemForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.todoText = null;
-    this.submitHandler = this.submitHandler.bind(this);
-  }
-  submitHandler(event) {
-    event.preventDefault();
-
-    if (this.todoText.value.trim()) {
-      this.props.dispatch(addItem(this.todoText.value.trim()));
-      this.todoText.value = '';
-    }
-  }
-  render() {
-    return (
-      <form className="form-inline row" onSubmit={this.submitHandler}>
-        <div className="col-xs-12">
-          <input type="text" className="form-control todo-text" ref={node => this.todoText = node} defaultValue="React is amazing!" placeholder="To do goes here" />
-          <button type="submit" className="btn btn-primary add-todo" disabled={this.todoText && 0 === this.todoText.value.length}>Add</button>
-        </div>
-      </form>
-    );
-  }
-}
-
-AddItemForm.propTypes = {
-  dispatch: React.PropTypes.func.isRequired
-};
-
-const AddTodoItem = connect()(AddItemForm);
-export default AddTodoItem;
