@@ -1,6 +1,30 @@
-import React from "react";
+import React from 'react';
 import '../../scss/todo-item.scss';
 
+const TodoItem = ({text, completed, onToggleItem, onRemoveItem}) => {
+  let itemClass = `form-check todo-item ${completed ? 'done' : 'open'}`;
+
+  return (
+    <li className={itemClass}>
+      <label className="form-check-label">
+        <input type="checkbox" className="form-check-input" onChange={onToggleItem} checked={completed} /> {text}
+      </label>
+      <button type="button" className="btn btn-danger btn-sm" onClick={onRemoveItem}>x</button>
+    </li>
+  );
+};
+
+TodoItem.propTypes = {
+  id: React.PropTypes.number.isRequired,
+  text: React.PropTypes.string.isRequired,
+  completed: React.PropTypes.bool.isRequired,
+  onToggleItem: React.PropTypes.func.isRequired,
+  onRemoveItem: React.PropTypes.func.isRequired
+};
+
+export default TodoItem;
+
+/* Stateful
 class TodoItem extends React.Component {
   constructor(props) {
     super(props);
@@ -25,13 +49,4 @@ class TodoItem extends React.Component {
     );
   }
 }
-
-TodoItem.propTypes = {
-  id: React.PropTypes.number.isRequired,
-  text: React.PropTypes.string.isRequired,
-  completed: React.PropTypes.bool.isRequired,
-  onToggleItem: React.PropTypes.func.isRequired,
-  onRemoveItem: React.PropTypes.func.isRequired
-};
-
-export default TodoItem;
+*/

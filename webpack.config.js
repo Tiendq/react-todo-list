@@ -7,7 +7,7 @@ module.exports = {
     }],
     loaders: [{
       test: /\.js$/,
-      loader: "babel",
+      loader: 'babel',
       exclude: /node_modules/
     }, {
       test: /\.scss$/,
@@ -15,13 +15,14 @@ module.exports = {
       exclude: /node_modules/
     }]
   },
-  entry: {
-    app: "./scripts/app.js"
-  },
+  entry: [
+    'webpack-dev-server/client?http://0.0.0.0:8080', // WebpackDevServer host and port
+    'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors
+    './scripts/app.js'
+  ],
   output: {
-    filename: "[name].js",
-    path: "./static/scripts",
-    publicPath: "/static/scripts/"
+    filename: "app.js",
+    path: "./static/scripts"
   },
   sassLoader: {
     sourceMap: true,

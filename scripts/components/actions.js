@@ -1,5 +1,7 @@
 let nextItemId = 0;
 
+// In Redux action creators simply return an action.
+// http://redux.js.org/docs/basics/Actions.html
 const addItem = (text) => ({
   type: 'ADD_ITEM',
   id: nextItemId ++,
