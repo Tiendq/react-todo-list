@@ -13,7 +13,7 @@ const getVisibleItems = (items, filter) => {
     case 'SHOW_COMPLETED':
       return items.filter(i => i.completed);
   }
-}
+};
 
 const mapStateToProps = (state) => ({
   items: getVisibleItems(state.items, state.filter)

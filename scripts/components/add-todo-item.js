@@ -22,7 +22,7 @@ class AddItemForm extends React.Component {
   submitHandler(event) {
     event.preventDefault();
 
-    if (this.state.text.length) {
+    if (this.state.text) {
       this.props.dispatch(addItem(this.state.text));
 
       this.setState({
@@ -35,7 +35,7 @@ class AddItemForm extends React.Component {
       <form className="form-inline row" onSubmit={this.submitHandler}>
         <div className="col-xs-12">
           <input type="text" className="form-control todo-text" onChange={this.textChangeHandler} value={this.state.text} placeholder="To do goes here" />
-          <button type="submit" className="btn btn-primary add-todo" disabled={0 === this.state.text.length}>Add</button>
+          <button type="submit" className="btn btn-primary add-todo" disabled={'' === this.state.text}>Add</button>
         </div>
       </form>
     );
