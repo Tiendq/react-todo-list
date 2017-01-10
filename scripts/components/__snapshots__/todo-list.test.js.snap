@@ -1,41 +1,49 @@
-exports[`test List has 2 items 1`] = `
-<ul
-  className="todolist">
-  <li
-    className="form-check todoitem undone">
-    <label
-      className="form-check-label">
-      <input
-        className="form-check-input"
-        onChange={[Function]}
-        type="checkbox" />
-       
-      Item 1
-    </label>
-    <button
-      className="btn btn-danger btn-sm"
-      onClick={[Function]}
-      type="button">
-      x
-    </button>
-  </li>
-  <li
-    className="form-check todoitem done">
-    <label
-      className="form-check-label">
-      <input
-        className="form-check-input"
-        onChange={[Function]}
-        type="checkbox" />
-       
-      Item 2
-    </label>
-    <button
-      className="btn btn-danger btn-sm"
-      onClick={[Function]}
-      type="button">
-      x
-    </button>
-  </li>
-</ul>
+exports[`TodoList snapshot test should have 2 items 1`] = `
+<div
+  className="row">
+  <div
+    className="col-xs-12">
+    <ul
+      className="todo-list">
+      <li
+        className="form-check todo-item open">
+        <label
+          className="form-check-label">
+          <input
+            checked={false}
+            className="form-check-input"
+            onChange={[Function]}
+            type="checkbox" />
+           
+          Item 1
+        </label>
+        <button
+          className="btn btn-danger btn-sm"
+          onClick={[Function]}
+          type="button">
+          x
+        </button>
+      </li>
+      <li
+        className="form-check todo-item done">
+        <label
+          className="form-check-label">
+          <input
+            checked={true}
+            className="form-check-input"
+            onChange={[Function]}
+            type="checkbox" />
+           
+          Item 2
+        </label>
+        <button
+          className="btn btn-danger btn-sm"
+          onClick={[Function]}
+          type="button">
+          x
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
 `;

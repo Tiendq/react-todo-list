@@ -2,18 +2,25 @@ import React from 'react';
 import TodoItem from './todo-item';
 import '../../scss/todo-list.scss';
 
-const TodoList = ({items, onToggleItem, onRemoveItem}) => (
-  <div className="row">
-    <div className="col-xs-12">
-      <ul className="todo-list">
-        {items.map(item => <TodoItem key={item.id}
-          {...item}
-          onToggleItem={() => onToggleItem(item.id)}
-          onRemoveItem={() => onRemoveItem(item.id)} />)}
-      </ul>
+const TodoList = ({items, onToggleItem, onRemoveItem}) => {
+  let renderTodoItem = (item) => (
+    <TodoItem key={item.id}
+      text={item.text}
+      completed={item.completed}
+      onToggleItem={() => onToggleItem(item.id)}
+      onRemoveItem={() => onRemoveItem(item.id)} />
+  );
+
+  return (
+    <div className="row">
+      <div className="col-xs-12">
+        <ul className="todo-list">
+          {items.map(item => renderTodoItem(item))}
+        </ul>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 TodoList.propTypes = {
   items: React.PropTypes.arrayOf(React.PropTypes.shape({

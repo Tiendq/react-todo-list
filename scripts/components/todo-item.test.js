@@ -1,23 +1,16 @@
-import React from "react";
-import renderer from "react-test-renderer";
-import TodoItem from "./todo-item";
+import React from 'react';
+import renderer from 'react-test-renderer';
+import TodoItem from './todo-item';
 
-test("There is 1 incomplete item", () => {
-  const component = renderer.create(
-    <TodoItem id={1} text="Not completed" completed={false} />
-  );
+describe('TodoItem', () => {
+  it('should have 1 incomplete and 1 complete items', () => {
+    let tree = renderer.create(
+      <div>
+        <TodoItem text="Not completed" completed={false} />
+        <TodoItem text="Completed" completed={true} />
+      </div>
+    ).toJSON();
 
-  let tree = component.toJSON();
-
-  expect(tree).toMatchSnapshot();
-});
-
-test("There is 1 completed item", () => {
-  const component = renderer.create(
-    <TodoItem id={2} text="Completed" completed={true} />
-  );
-
-  let tree = component.toJSON();
-
-  expect(tree).toMatchSnapshot();
+    expect(tree).toMatchSnapshot();
+  });
 });

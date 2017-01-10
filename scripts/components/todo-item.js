@@ -15,7 +15,6 @@ const TodoItem = ({text, completed, onToggleItem, onRemoveItem}) => {
 };
 
 TodoItem.propTypes = {
-  id: React.PropTypes.string.isRequired,
   text: React.PropTypes.string.isRequired,
   completed: React.PropTypes.bool.isRequired,
   onToggleItem: React.PropTypes.func.isRequired,

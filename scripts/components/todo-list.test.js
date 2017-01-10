@@ -1,23 +1,23 @@
-import React from "react";
-import renderer from "react-test-renderer";
-import TodoList from "./todo-list";
+import React from 'react';
+import renderer from 'react-test-renderer';
+import TodoList from './todo-list';
 
-test("List has 2 items", () => {
-  const items = [{
-    id: 1,
-    text: "Item 1",
-    done: false
-  }, {
-    id: 2,
-    text: "Item 2",
-    done: true
-  }];
+describe('TodoList snapshot test', () => {
+  it("should have 2 items", () => {
+    const items = [{
+      id: '1',
+      text: "Item 1",
+      completed: false
+    }, {
+      id: '2',
+      text: "Item 2",
+      completed: true
+    }];
 
-  const component = renderer.create(
-    <TodoList items={items} />
-  );
+    let tree = renderer.create(
+      <TodoList items={items} />
+    ).toJSON();
 
-  let tree = component.toJSON();
-
-  expect(tree).toMatchSnapshot();
+    expect(tree).toMatchSnapshot();
+  });
 });
