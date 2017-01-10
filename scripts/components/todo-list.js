@@ -17,7 +17,7 @@ const TodoList = ({items, onToggleItem, onRemoveItem}) => (
 
 TodoList.propTypes = {
   items: React.PropTypes.arrayOf(React.PropTypes.shape({
-    id: React.PropTypes.number.isRequired,
+    id: React.PropTypes.string.isRequired,
     text: React.PropTypes.string.isRequired,
     completed: React.PropTypes.bool.isRequired
   }).isRequired).isRequired,
