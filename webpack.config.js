@@ -22,7 +22,8 @@ module.exports = {
   ],
   output: {
     filename: "app.js",
-    path: "./static/scripts"
+    path: "./static/scripts",
+    publicPath: "/static/scripts" // Must exist for HMR
   },
   sassLoader: {
     sourceMap: true,

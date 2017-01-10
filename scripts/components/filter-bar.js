@@ -7,7 +7,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  onChangeFilter: (filter) => {
+  onChangeFilter(filter) {
     dispatch(changeFilter(filter));
   }
 });

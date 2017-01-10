@@ -20,10 +20,10 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  onToggleItem: (id) => {
+  onToggleItem(id) {
     dispatch(toggleItem(id));
   },
-  onRemoveItem: (id) => {
+  onRemoveItem(id) {
     dispatch(removeItem(id));
   }
 });
