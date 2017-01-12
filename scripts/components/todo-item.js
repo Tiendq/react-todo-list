@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../scss/todo-item.scss';
 
-const TodoItem = ({text, completed, onToggleItem, onRemoveItem}) => {
+const TodoItem = ({ text, completed, onToggleItem, onRemoveItem }) => {
   let itemClass = `form-check todo-item ${completed ? 'done' : 'open'}`;
 
   return (

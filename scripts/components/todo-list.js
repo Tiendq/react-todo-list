@@ -2,7 +2,7 @@ import React from 'react';
 import TodoItem from './todo-item';
 import '../../scss/todo-list.scss';
 
-const TodoList = ({items, onToggleItem, onRemoveItem}) => {
+const TodoList = ({ items, onToggleItem, onRemoveItem }) => {
   let renderTodoItem = (item) => (
     <TodoItem key={item.id}
       text={item.text}
