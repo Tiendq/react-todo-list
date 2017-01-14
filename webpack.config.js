@@ -17,7 +17,9 @@ module.exports = {
       test: /\.(png|jpg|svg)$/,
       loader: 'file',
       query: {
-        name: '/images/[name].[hash:7].[ext]'
+        name: '[name].[hash:7].[ext]',
+        publicPath: '/static/images/',
+        outputPath: '../images/'
       }
     }]
   },
@@ -28,8 +30,8 @@ module.exports = {
   ],
   output: {
     filename: 'app.js',
-    path: __dirname + '/static',
-    publicPath: '/static' // Must exist for HMR
+    path: __dirname + '/static/scripts',
+    publicPath: '/static/scripts' // Must exist for HMR
   },
   sassLoader: {
     sourceMap: true,
