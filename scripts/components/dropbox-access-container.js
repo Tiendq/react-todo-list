@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { toggleItem, removeItem } from './actions';
+import { toggleItem } from './actions';
 import DropboxAccess from './dropbox-access';
 
 const mapDispatchToProps = (dispatch) => ({

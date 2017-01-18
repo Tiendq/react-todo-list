@@ -20,7 +20,7 @@ module.exports = {
     "react" // eslint-plugin-react
   ],
   "rules": {
-    "no-console": 1,
+    "no-console": 0,
     "no-unused-vars": 1
   }
 };

@@ -11,7 +11,7 @@ const todoItem = (state = {}, action) => {
       return state.id !== action.id ? state : null;
 
     case 'TOGGLE_ITEM':
-      return state.id !== action.id ? state : Object.assign({}, state, { completed: !state.completed });
+      return state.id !== action.id ? state : { ...state, completed: !state.completed };
 
     default:
       return state
