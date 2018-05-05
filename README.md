@@ -1,4 +1,6 @@
 # react-todo-list
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/Tiendq/react-todo-list.svg)](https://greenkeeper.io/)
 TODO list sample web application with React, based on [Facebook's tutorial](https://facebook.github.io/react/docs/tutorial.html) sample.
 
 First working version is [LIVE](http://codepen.io/Tiendq/pen/jrZAWk) on CodePen (it's a bit out of date).
