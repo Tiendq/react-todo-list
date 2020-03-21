@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import TodoItem from './todo-item';
 import '../../scss/todo-list.scss';
 
@@ -23,13 +24,13 @@ const TodoList = ({ items, onToggleItem, onRemoveItem }) => {
 };
 
 TodoList.propTypes = {
-  items: React.PropTypes.arrayOf(React.PropTypes.shape({
-    id: React.PropTypes.string.isRequired,
-    text: React.PropTypes.string.isRequired,
-    completed: React.PropTypes.bool.isRequired
+  items: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired
   }).isRequired).isRequired,
-  onToggleItem: React.PropTypes.func.isRequired,
-  onRemoveItem: React.PropTypes.func.isRequired
+  onToggleItem: PropTypes.func.isRequired,
+  onRemoveItem: PropTypes.func.isRequired
 };
 
 export default TodoList;

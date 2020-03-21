@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../../scss/dropbox-access.scss';
 import dropboxLogo from '../../assets/images/dropbox-logo.svg';
 import dropboxText from '../../assets/images/dropbox-text.svg';
@@ -51,7 +52,7 @@ class DropboxAccess extends React.Component {
 }
 
 DropboxAccess.propTypes = {
-  onGrantAccess: React.PropTypes.func.isRequired
+  onGrantAccess: PropTypes.func.isRequired
 };
 
 export default DropboxAccess;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../../scss/todo-item.scss';
 
 const TodoItem = ({ text, completed, onToggleItem, onRemoveItem }) => {
@@ -15,10 +16,10 @@ const TodoItem = ({ text, completed, onToggleItem, onRemoveItem }) => {
 };
 
 TodoItem.propTypes = {
-  text: React.PropTypes.string.isRequired,
-  completed: React.PropTypes.bool.isRequired,
-  onToggleItem: React.PropTypes.func.isRequired,
-  onRemoveItem: React.PropTypes.func.isRequired
+  text: PropTypes.string.isRequired,
+  completed: PropTypes.bool.isRequired,
+  onToggleItem: PropTypes.func.isRequired,
+  onRemoveItem: PropTypes.func.isRequired
 };
 
 export default TodoItem;

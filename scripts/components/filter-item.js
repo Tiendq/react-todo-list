@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../../scss/todo-filter.scss';
 
 const items = [{
@@ -25,8 +26,8 @@ function FilterItem({ filter, onChangeFilter }) {
 }
 
 FilterItem.propTypes = {
-  filter: React.PropTypes.string.isRequired,
-  onChangeFilter: React.PropTypes.func.isRequired
+  filter: PropTypes.string.isRequired,
+  onChangeFilter: PropTypes.func.isRequired
 };
 
 export default FilterItem;

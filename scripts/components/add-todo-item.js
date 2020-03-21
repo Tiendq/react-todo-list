@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addItem } from './actions';
 import '../../scss/add-todo-item.scss';
@@ -43,7 +44,7 @@ class AddItemForm extends React.Component {
 }
 
 AddItemForm.propTypes = {
-  dispatch: React.PropTypes.func.isRequired
+  dispatch: PropTypes.func.isRequired
 };
 
 const AddTodoItem = connect()(AddItemForm);

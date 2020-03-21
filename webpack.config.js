@@ -1,21 +1,34 @@
 module.exports = {
   module: {
-    preLoaders: [{
+    rules: [{
       test: /\.js$/,
-      loader: 'eslint',
+      enforce: 'pre',
+      loader: 'eslint-loader',
       exclude: /node_modules/
-    }],
-    loaders: [{
+    }, {
       test: /\.js$/,
-      loader: 'babel',
+      loader: 'babel-loader',
       exclude: /node_modules/
     }, {
       test: /\.scss$/,
-      loaders: ['style', 'css', 'sass'],
+      use: [
+        'style-loader', // Creates `style` nodes from JS strings
+        'css-loader', // Translates CSS into CommonJS
+        {
+          loader: 'sass-loader', // Compiles Sass to CSS
+          options: {
+            sassOptions: {
+              sourceComments: true,
+              outputStyle: 'expanded'
+            },
+            sourceMap: true
+          }
+        }
+      ],
       exclude: /node_modules/
     }, {
       test: /\.(png|jpg|svg)$/,
-      loader: 'file',
+      loader: 'file-loader',
       query: {
         name: '[name].[hash:7].[ext]',
         publicPath: '/static/images/',
@@ -32,11 +45,6 @@ module.exports = {
     filename: 'app.js',
     path: __dirname + '/static/scripts',
     publicPath: '/static/scripts' // Must exist for HMR
-  },
-  sassLoader: {
-    sourceMap: true,
-    sourceComments: true,
-    outputStyle: 'expanded'
   },
   devtool: 'source-map'
 };

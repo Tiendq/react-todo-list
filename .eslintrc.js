@@ -2,9 +2,7 @@ module.exports = {
   "env": {
     "browser": true,
     "es6": true,
-    "jest": true,
-    "jquery": true,
-    "node": true
+    "jest": true
   },
   "extends": [
     "eslint:recommended", // eslint
@@ -12,6 +10,11 @@ module.exports = {
     "plugin:import/warnings", // eslint-plugin-import
     "plugin:react/recommended" // eslint-plugin-react
   ],
+  "settings": {
+    "react": {
+      "version": "detect" // React version. "detect" automatically picks the version you have installed.
+    }
+  },
   "parser": "babel-eslint",
   "parserOptions": {
     "sourceType": "module"
@@ -21,6 +24,7 @@ module.exports = {
   ],
   "rules": {
     "no-console": 0,
-    "no-unused-vars": 1
+    "no-unused-vars": 1,
+    "react/no-deprecated": 1
   }
 };
