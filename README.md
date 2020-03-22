@@ -1,6 +1,6 @@
 # react-todo-list
 
-TODO list sample web application with React, based on [Facebook's tutorial](https://facebook.github.io/react/docs/tutorial.html) sample.
+To do list sample web application with React, based on [Facebook's tutorial](https://facebook.github.io/react/docs/tutorial.html) sample.
 
 First working version is [LIVE](http://codepen.io/Tiendq/pen/jrZAWk) on CodePen (it's a bit out of date).
 
@@ -13,18 +13,20 @@ You will learn about:
 * Linting with ESLint
 * Testing with Jest
 
-## How to start
+## How to Start
 
-`yarn install`
+```bash
+yarn install
+yarn run start
+```
 
-`yarn run start`
+## To Do
 
-## TO DO
 * ~~Filter by status~~
 * ~~Update Add button state~~
 * Nice remove icon
-* Add new item at the bottom, same as iOS Todo app
+* Add new item at the bottom, same as iOS To Do app
 * Editable app title
-* Persistent state
+* ~~Persistent state~~
 
 Tien Do.

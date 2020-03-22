@@ -4,13 +4,13 @@ import './todo-filter.scss';
 
 const items = [{
   name: 'SHOW_ALL',
-  text: 'Show all'
+  text: 'All items'
 }, {
   name: 'SHOW_OPEN',
-  text: 'Show open'
+  text: 'Open only'
 }, {
   name: 'SHOW_COMPLETED',
-  text: 'Show completed'
+  text: 'Completed only'
 }];
 
 function FilterItem({ filter, onChangeFilter }) {

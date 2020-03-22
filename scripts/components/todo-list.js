@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import TodoItem from './todo-item';
 import './todo-list.scss';
 
-const TodoList = ({ items, onToggleItem, onRemoveItem }) => {
+function TodoList({ items, onToggleItem, onRemoveItem }) {
   let renderTodoItem = (item) => (
     <TodoItem key={item.id}
       text={item.text}
@@ -21,7 +21,7 @@ const TodoList = ({ items, onToggleItem, onRemoveItem }) => {
       </div>
     </div>
   );
-};
+}
 
 TodoList.propTypes = {
   items: PropTypes.arrayOf(PropTypes.shape({
