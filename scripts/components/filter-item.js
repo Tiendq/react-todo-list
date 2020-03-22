@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../../scss/todo-filter.scss';
+import './todo-filter.scss';
 
 const items = [{
   name: 'SHOW_ALL',

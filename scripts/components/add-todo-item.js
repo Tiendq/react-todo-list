@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { addItem } from './actions';
-import '../../scss/add-todo-item.scss';
+import { addItem } from '../actions';
+import './add-todo-item.scss';
 
 class AddItemForm extends React.Component {
   constructor(props) {

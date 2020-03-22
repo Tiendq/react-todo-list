@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../../scss/todo-item.scss';
+import './todo-item.scss';
 
 const TodoItem = ({ text, completed, onToggleItem, onRemoveItem }) => {
   let itemClass = `form-check todo-item ${completed ? 'done' : 'open'}`;

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import TodoItem from './todo-item';
-import '../../scss/todo-list.scss';
+import './todo-list.scss';
 
 const TodoList = ({ items, onToggleItem, onRemoveItem }) => {
   let renderTodoItem = (item) => (

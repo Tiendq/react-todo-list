@@ -2,7 +2,7 @@ import React from 'react';
 import AddTodoItem from './add-todo-item';
 import FilterableTodoList from './filterable-todo-list';
 import FilterBar from './filter-bar';
-import '../../scss/todo-app.scss';
+import './todo-app.scss';
 
 const TodoApp = () => (
   <div>

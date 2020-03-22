@@ -4,8 +4,8 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import { createLogger } from 'redux-logger';
 import throttle from 'lodash.throttle';
-import reducers from './components/reducers';
-import { loadState, saveState } from './components/local-storage';
+import reducers from './reducers';
+import { loadState, saveState } from './local-storage';
 import TodoApp from './components/todo-app';
 
 const loggerMiddleware = createLogger();

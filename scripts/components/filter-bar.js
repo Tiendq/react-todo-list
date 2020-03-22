@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import {changeFilter} from './actions';
+import {changeFilter} from '../actions';
 import FilterItem from './filter-item';
 
 const mapStateToProps = (state) => ({
