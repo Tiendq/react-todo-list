@@ -31,13 +31,17 @@ class TodoApp extends React.Component {
     }
 
     return (
-      <div>
-        <h1 className="app-title">React Todo List</h1>
-        <div className="row">
-          <div className="col-md-4">
-            <AddTodoItem />
-            <FilterableTodoList />
-            <FilterBar />
+      <div className="row justify-content-md-center">
+        <div className="col-12 col-sm-8 col-md-6 col-lg-4 todo-app">
+          <div className="row">
+            <h1 className="col-12 app-title">React Todo List</h1>
+          </div>
+          <div className="row">
+            <div className="col-12">
+              <AddTodoItem />
+              <FilterableTodoList />
+              <FilterBar />
+            </div>
           </div>
         </div>
       </div>

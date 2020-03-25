@@ -31,7 +31,7 @@ class AddItemForm extends React.Component {
   render() {
     return (
       <form className="form-inline row" onSubmit={this.submitHandler}>
-        <div className="col-xs-12">
+        <div className="col-12">
           <input type="text" className="form-control todo-text" onChange={this.textChangeHandler} value={this.state.text} placeholder="To do goes here" />
           <button type="submit" className="btn btn-primary add-todo" disabled={'' === this.state.text}>Add</button>
         </div>

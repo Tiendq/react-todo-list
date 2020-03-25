@@ -14,7 +14,7 @@ function TodoList({ items, onToggleItem, onRemoveItem }) {
 
   return (
     <div className="row">
-      <div className="col-xs-12">
+      <div className="col-12">
         <ul className="todo-list">
           {items.map(item => renderTodoItem(item))}
         </ul>

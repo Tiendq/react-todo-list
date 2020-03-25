@@ -16,9 +16,11 @@ const items = [{
 function FilterItem({ filter, onChangeFilter }) {
   return (
     <div className="row">
-      <div className="col-xs-12 todo-filter">
+      <div className="col-12 todo-filter">
         {items.map(item => (
-          <label key={item.name} className="form-check-inline todo-filter-item"><input type="radio" name="todo_filter" className="form-check-input" onChange={() => onChangeFilter(item.name)} value={item.name} checked={filter === item.name} />&nbsp;{item.text}</label>
+          <label key={item.name} className="form-check-inline todo-filter-item">
+            <input type="radio" name="todo_filter" className="form-check-input" onChange={() => onChangeFilter(item.name)} value={item.name} checked={filter === item.name} />&nbsp;{item.text}
+          </label>
         ))}
       </div>
     </div>
