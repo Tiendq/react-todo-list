@@ -1,45 +1,58 @@
-exports[`TodoList snapshot test should have 2 items 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoList should have 2 items 1`] = `
 <div
-  className="row">
+  className="row"
+>
   <div
-    className="col-xs-12">
+    className="col-xs-12"
+  >
     <ul
-      className="todo-list">
+      className="todo-list"
+    >
       <li
-        className="form-check todo-item open">
+        className="form-check todo-item open"
+      >
         <label
-          className="form-check-label">
+          className="form-check-label"
+        >
           <input
             checked={false}
             className="form-check-input"
             onChange={[Function]}
-            type="checkbox" />
+            type="checkbox"
+          />
            
           Item 1
         </label>
         <button
           className="btn btn-danger btn-sm"
           onClick={[Function]}
-          type="button">
+          type="button"
+        >
           x
         </button>
       </li>
       <li
-        className="form-check todo-item done">
+        className="form-check todo-item done"
+      >
         <label
-          className="form-check-label">
+          className="form-check-label"
+        >
           <input
             checked={true}
             className="form-check-input"
             onChange={[Function]}
-            type="checkbox" />
+            type="checkbox"
+          />
            
           Item 2
         </label>
         <button
           className="btn btn-danger btn-sm"
           onClick={[Function]}
-          type="button">
+          type="button"
+        >
           x
         </button>
       </li>

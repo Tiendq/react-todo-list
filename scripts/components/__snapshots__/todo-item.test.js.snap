@@ -1,40 +1,50 @@
-exports[`TodoItem should have 1 incomplete and 1 complete items 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoItem should render correctly 1`] = `
 <div>
   <li
-    className="form-check todo-item open">
+    className="form-check todo-item done"
+  >
     <label
-      className="form-check-label">
-      <input
-        checked={false}
-        className="form-check-input"
-        onChange={undefined}
-        type="checkbox" />
-       
-      Not completed
-    </label>
-    <button
-      className="btn btn-danger btn-sm"
-      onClick={undefined}
-      type="button">
-      x
-    </button>
-  </li>
-  <li
-    className="form-check todo-item done">
-    <label
-      className="form-check-label">
+      className="form-check-label"
+    >
       <input
         checked={true}
         className="form-check-input"
-        onChange={undefined}
-        type="checkbox" />
+        onChange={[Function]}
+        type="checkbox"
+      />
        
       Completed
     </label>
     <button
       className="btn btn-danger btn-sm"
-      onClick={undefined}
-      type="button">
+      onClick={[Function]}
+      type="button"
+    >
+      x
+    </button>
+  </li>
+  <li
+    className="form-check todo-item open"
+  >
+    <label
+      className="form-check-label"
+    >
+      <input
+        checked={false}
+        className="form-check-input"
+        onChange={[Function]}
+        type="checkbox"
+      />
+       
+      Not completed
+    </label>
+    <button
+      className="btn btn-danger btn-sm"
+      onClick={[Function]}
+      type="button"
+    >
       x
     </button>
   </li>

@@ -24,6 +24,8 @@ module.exports = {
   ],
   "rules": {
     "no-console": 0,
+    "no-extra-semi": 1,
+    "no-unreachable": 1,
     "no-unused-vars": 1,
     "react/no-deprecated": 1
   }
