@@ -25,8 +25,8 @@ class TodoApp extends React.Component {
   render() {
     if (this.state.hasError) {
       return [
-        <h1 key='h1'>Something went wrong.</h1>,
-        <p key='p'>{this.state.message}</p>
+        <h1 key="h1">Something went wrong.</h1>,
+        <p key="p">{this.state.message}</p>
       ];
     }
 

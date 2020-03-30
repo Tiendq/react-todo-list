@@ -1,7 +1,9 @@
 const loadState = () => {
   try {
     let serializedState = localStorage.getItem('react-todo-list');
-    return serializedState ? JSON.parse(serializedState) : undefined;
+
+    if (serializedState)
+      return JSON.parse(serializedState);
   } catch (error) {
     console.log(error);
   }
